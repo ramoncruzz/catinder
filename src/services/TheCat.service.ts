@@ -1,29 +1,13 @@
-import service from './TheCat.api';
-import { Cat, Vote, VoteResponse } from '../utils/types';
+import axios from 'axios';
+import Config from "react-native-config";
 
-const listCats = (page: number, size: number): Promise<Array<Cat>> =>
-  new Promise<Array<Cat>>((resolve, reject) => {
-    service
-      .get<Array<Cat>>('/breeds', {
-        params: {
-          page,
-          size,
-        },
-      })
-      .then((response) => {
-        resolve(response.data);
-        console.log('calling the page', page);
-      })
-      .catch((error:any) => reject(error));
-  });
+const TheCat = axios.create({
+  baseURL: Config.BASE_URL,
+  timeout: 30000,
+  headers: {
+    'Content-Type': 'application/json',
+    'x-api-key': Config.THE_CAT_API
+  },
+});
 
-  const vote = (vote: Vote): Promise<VoteResponse> =>
-  new Promise<VoteResponse>((resolve, reject) => {
-    service
-      .post<VoteResponse>('/votes', vote)
-      .then((response) => {
-        resolve(response.data);
-      })
-      .catch((error:any) => reject(error));
-  });
-export { listCats, vote };
+export default TheCat;
