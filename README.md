@@ -44,5 +44,5 @@ Clone the project and execute: `yarn install`, `cd ios/`, `pod install`, `cd ..`
 
 # Next steps 
 
-Recently, in my work, I created a structure to make mocks of http requests, this structure allows to vary the response of the requests.
+Recently, in my work, I've created a structure to make mocks of http requests, this structure allows to vary the response of the requests.
 With this, it is possible to do an end-to-end test without having to mess with the service layer. This made me want to write an article explaining how I did it, so the next step will be to complete this project and build all the end-to-end tests using detox, as well as the unit tests of visual components and custom hooks.
