@@ -50,3 +50,14 @@ export type Cat = {
     image: ImageCat,
    
 }
+
+export type Vote = {
+    image_id: string,
+    sub_id?:string,
+    value: number
+  }
+
+ export type VoteResponse = {
+    message: string,
+    id: number,
+}
