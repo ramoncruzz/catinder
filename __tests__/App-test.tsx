@@ -4,11 +4,13 @@
 
 import 'react-native';
 import React from 'react';
-import App from '../App';
+import {Home, Chat, Profile} from '../src/pages';
 
-// Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
+jest.mock('react-native-card-stack-swiper');
 
 it('renders correctly', () => {
-  renderer.create(<App />);
+  renderer.create(<Home />);
+  renderer.create(<Chat />);
+  renderer.create(<Profile />);
 });
