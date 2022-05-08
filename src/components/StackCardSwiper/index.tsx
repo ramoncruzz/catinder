@@ -1,7 +1,8 @@
 import React, {useRef} from 'react';
 import CardStack from 'react-native-card-stack-swiper';
-import { View } from 'react-native';
-import CatCard from '../CatCard'
+import { Div } from 'react-native-magnus';
+import CatCard from '../CatCard';
+import Button from '../Button';
 import {Cat} from '../../utils/types';
 import {trackComponent} from '../../utils/trackTestID';
 import LoadingView from './Loading'
@@ -27,7 +28,7 @@ const StackCardSwiper: React.FC<Prop> = ({
       };
 
     return (
-        <View testID={testID}>
+        <Div testID={testID}>
             <CardStack
                 verticalSwipe={false}
                 style={Styles.content}
@@ -37,7 +38,11 @@ const StackCardSwiper: React.FC<Prop> = ({
                 renderNoMoreCards={() => <LoadingView/>}>
                 {renderCard(cats)}
             </CardStack>
-        </View>
+            <Div flexDir='row' justifyContent='space-around' w='70%' alignSelf='center' mb={50}>
+                <Button name='notMatch' onPress={()=>{}}/>
+                <Button name='match' onPress={()=>{}}/>
+            </Div>
+        </Div>
     );
 }
 export default StackCardSwiper;

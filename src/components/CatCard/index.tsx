@@ -12,7 +12,7 @@ const Card: React.FC<Prop> = ({cat, testID}): JSX.Element =>{
 
     return (
         <RNCard>
-            <Div flex={1} rounded={16} shadow="lg" testID={testID} bgImg={cat.image} bgMode="cover" w={343} h={446} flexDir="column-reverse">
+            <Div flex={1} rounded={16} shadow="md" testID={testID} bgImg={cat.image} bgMode="cover" w={343} h={446} flexDir="column-reverse">
                 <Div  flexDir='row' alignSelf='center' bg='white' w={307} h={48} roundedTopLeft={16} roundedTopRight={16} p={10}>
                     <Div flex={1} alignSelf='flex-start' ml={10}>
                         <Text fontFamily='NunitoSans-Bold' fontSize={16}>{cat.name}</Text>
