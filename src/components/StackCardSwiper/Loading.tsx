@@ -5,7 +5,7 @@ const Loading: React.FC = (): JSX.Element =>{
 
     return (
         <Div flex={1}>
-            <Text>Loading...</Text>
+            <Text>Loading...ddd</Text>
         </Div>
     )
 }
