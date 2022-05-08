@@ -1,5 +1,5 @@
 import React, {useCallback} from 'react';
-import { TouchableOpacity, View, Text} from 'react-native';
+import { TouchableOpacity, View} from 'react-native';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import Styles from './style';
 import { trackComponent, trackButton } from '../../utils/trackTestID';
@@ -16,10 +16,10 @@ const CustomTabBar: React.FC<BottomTabBarProps> =(bottomProps: BottomTabBarProps
 
   const renderIcon = ( index: number) =>{
     if(index===0 ) return (
-      <View style={{flexDirection: 'row'}}>
+      <View style={{flexDirection: 'row'}} >
          <TouchableOpacity
             accessibilityRole="button"
-            testID={trackButton(nameForTesting, `tab_${state.index}`)}
+            testID={trackButton(nameForTesting, 'tab_0')}
             onPress={()=> onPress(state.routes[0])}
             style={Styles.tabbar}
           >
@@ -27,7 +27,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> =(bottomProps: BottomTabBarProps
           </TouchableOpacity>
           <TouchableOpacity
             accessibilityRole="button"
-            testID={trackButton(nameForTesting, `tab_${state.index}`)}
+            testID={trackButton(nameForTesting, 'tab_1')}
             onPress={()=> onPress(state.routes[1])}
             style={Styles.tabbar}
           >
@@ -35,7 +35,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> =(bottomProps: BottomTabBarProps
           </TouchableOpacity>
           <TouchableOpacity
             accessibilityRole="button"
-            testID={trackButton(nameForTesting, `tab_${state.index}`)}
+            testID={trackButton(nameForTesting, 'tab_2')}
             onPress={()=> onPress(state.routes[2])}
             style={Styles.tabbar}
           >
@@ -49,7 +49,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> =(bottomProps: BottomTabBarProps
       <View style={{flexDirection: 'row'}}>
          <TouchableOpacity
             accessibilityRole="button"
-            testID={trackButton(nameForTesting, `tab_${state.index}`)}
+            testID={trackButton(nameForTesting, 'tab_0')}
             onPress={()=> onPress(state.routes[0])}
             style={Styles.tabbar}
           >
@@ -57,7 +57,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> =(bottomProps: BottomTabBarProps
           </TouchableOpacity>
           <TouchableOpacity
             accessibilityRole="button"
-            testID={trackButton(nameForTesting, `tab_${state.index}`)}
+            testID={trackButton(nameForTesting, 'tab_1')}
             onPress={()=> onPress(state.routes[1])}
             style={Styles.tabbar}
           >
@@ -65,7 +65,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> =(bottomProps: BottomTabBarProps
           </TouchableOpacity>
           <TouchableOpacity
             accessibilityRole="button"
-            testID={trackButton(nameForTesting, `tab_${state.index}`)}
+            testID={trackButton(nameForTesting, 'tab_2')}
             onPress={()=> onPress(state.routes[2])}
             style={Styles.tabbar}
           >
@@ -78,7 +78,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> =(bottomProps: BottomTabBarProps
       <View style={{flexDirection: 'row'}}>
          <TouchableOpacity
             accessibilityRole="button"
-            testID={trackButton(nameForTesting, `tab_${state.index}`)}
+            testID={trackButton(nameForTesting, 'tab_0')}
             onPress={()=> onPress(state.routes[0])}
             style={Styles.tabbar}
           >
@@ -86,7 +86,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> =(bottomProps: BottomTabBarProps
           </TouchableOpacity>
           <TouchableOpacity
             accessibilityRole="button"
-            testID={trackButton(nameForTesting, `tab_${state.index}`)}
+            testID={trackButton(nameForTesting, 'tab_1')}
             onPress={()=> onPress(state.routes[1])}
             style={Styles.tabbar}
           >
@@ -94,7 +94,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> =(bottomProps: BottomTabBarProps
           </TouchableOpacity>
           <TouchableOpacity
             accessibilityRole="button"
-            testID={trackButton(nameForTesting, `tab_${state.index}`)}
+            testID={trackButton(nameForTesting, 'tab_2')}
             onPress={()=> onPress(state.routes[2])}
             style={Styles.tabbar}
           >
@@ -105,7 +105,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> =(bottomProps: BottomTabBarProps
       )
 }
     return (
-      <View testID={trackComponent(nameForTesting,'container')} style={Styles.container}>
+      <View testID={trackComponent(nameForTesting, 'BottonBar')} style={Styles.container}>
         {renderIcon(state.index)}
       </View>
     );
