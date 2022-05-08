@@ -13,12 +13,18 @@ const Home: React.FC = ():JSX.Element =>{
         return data.map((item, index) => (
           <Card style={Styles.card}>
             <View testID={`card_${index}`} style={Styles.card}>
-              <Text style={Styles.label}>Cat{item.name}</Text>
+              <Text style={Styles.label}>{item.name}</Text>
             </View>
           </Card>
         ));
       };
 
+    const notlike = (index:number): Promise<void> => new Promise((resolve, reject)=>{
+      setTimeout(()=>{
+        console.log('nao gostei', index);
+        resolve();
+      },2000)
+    })
     return(
     <SafeAreaView style={Styles.page}>
         <View style={Styles.container}>
@@ -26,7 +32,7 @@ const Home: React.FC = ():JSX.Element =>{
             style={Styles.content}
             ref={swiper}
             onSwipedLeft={index => {
-            console.log('nao gostei', index);
+              notlike(index);
             }}
             onSwipedRight={index => {
             console.log('gostei', index);
