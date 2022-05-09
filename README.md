@@ -57,7 +57,9 @@ This project uses the follown dependencies
 
 ## How to run the project
 
-Clone the project and execute: `yarn install`, `cd ios/`, `pod install`, `cd ..`
+Clone the project `git clone -b chore/afterTime https://github.com/ramoncruzz/catinder/tree/chore/afterTime`
+
+and execute: `yarn install`, `cd ios/`, `pod install`, `cd ..`
 
 > [ios]: `yarn ios` > [android]: `yarn android`
 
