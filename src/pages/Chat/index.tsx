@@ -7,7 +7,7 @@ const pageNameForTesting = 'chat';
 const Chat: React.FC = ():JSX.Element =>(
     <SafeAreaView style={Styles.page}>
         <View testID={trackPageView(pageNameForTesting,'page')} style={Styles.container}>
-            <Text style={Styles.text}>Chat</Text>
+            <Text style={Styles.text}>02</Text>
         </View>
     </SafeAreaView>
 )
