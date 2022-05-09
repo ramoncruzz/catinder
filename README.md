@@ -37,7 +37,7 @@ This project has been configured to use TypeScript and to get the best organizat
 
 # How to run the project
 
-Clone the project `git clone -b chore/afterTime https://github.com/ramoncruzz/catinder/tree/chore/afterTime`
+Clone the project `git clone -b chore/master https://github.com/ramoncruzz/catinder/tree/chore/afterTime`
 
 and execute: `yarn install`, `cd ios/`, `pod install`, `cd ..`
 
