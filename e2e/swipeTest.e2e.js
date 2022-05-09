@@ -38,4 +38,18 @@ describe('Testing Home page', () => {
     await expect(element(by.id('StackCardSwiper_view_noMoreCards'))).toBeVisible();
   });
 
+  it('should navigate between screens', async () => {
+    await expect(element(by.id('home_pageview_page'))).toBeVisible();
+    await element(by.id('bottombar_button_tab_1')).tap();
+
+    await expect(element(by.id('chat_pageview_page'))).toBeVisible();
+    await element(by.id('bottombar_button_tab_2')).tap();
+
+    await expect(element(by.id('profile_pageview_page'))).toBeVisible();
+    await element(by.id('bottombar_button_tab_0')).tap();
+
+    await expect(element(by.id('home_pageview_page'))).toBeVisible();
+    
+  });
+
 });

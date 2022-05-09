@@ -2,7 +2,6 @@ import React from 'react';
 import { SafeAreaView, View} from 'react-native';
 import {StackCardSwiper} from '../../components';
 import {trackComponent, trackPageView } from '../../utils/trackTestID';
-import { Cat } from '../../utils/types';
 import {useTheCat} from '../../hooks'
 import Styles from './styles';
 
