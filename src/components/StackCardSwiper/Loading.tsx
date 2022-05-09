@@ -1,11 +1,16 @@
 import React from 'react';
 import { Div, Text } from 'react-native-magnus';
 
-const Loading: React.FC = (): JSX.Element =>{
+type Props ={
+    isLoading?: boolean,
+    theEnd?: boolean,
+    testID: string,
+}
+const Loading: React.FC<Props> = ({testID}): JSX.Element =>{
 
     return (
-        <Div flex={1}>
-            <Text>Loading...ddd</Text>
+        <Div testID={testID}>
+            <Text fontSize={25}>The end!</Text>
         </Div>
     )
 }
