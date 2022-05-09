@@ -5,25 +5,26 @@ type Prop ={
     name: 'notMatch' | 'match'
     onPress: ()=> void
     size?: number
+    testID: string
 }
-const Button: React.FC<Prop> = ({name, size, onPress}): JSX.Element =>{
+const Button: React.FC<Prop> = ({name, size, testID, onPress}): JSX.Element =>{
 
     if(name ==='notMatch'){
         return (
-            <MGButton rounded="circle" onPress={onPress} bg="white" shadow="xl" >
+            <MGButton testID={testID} rounded="circle" onPress={onPress} bg="white" shadow="xl" >
                 <Icon fontFamily='Ionicons' name='close-outline'  fontSize={size || 56} color="#E16359"/>
             </MGButton>
         );
     }
     if(name ==='match'){
         return (
-            <MGButton rounded="circle" onPress={onPress} bg="white" shadow="xl" >
+            <MGButton testID={testID} rounded="circle" onPress={onPress} bg="white" shadow="xl" >
                 <Icon fontFamily='Ionicons' name='heart' fontSize={size || 56} color="#6BD88E" />
             </MGButton>
         );
     }
     return (
-        <MGButton rounded="circle" onPress={onPress} bg="white" shadow="xl" >
+        <MGButton testID={testID} rounded="circle" onPress={onPress} bg="white" shadow="xl" >
             <Icon fontFamily='Ionicons' name='close-outline'  fontSize={size || 56} color="#E16359"/>
         </MGButton>
     );

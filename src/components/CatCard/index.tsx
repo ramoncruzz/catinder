@@ -6,9 +6,9 @@ import {Cat} from '../../utils/types';
 type Prop ={
     cat: Cat;
     testID: string;
-
+    index?: number;
 }
-const Card: React.FC<Prop> = ({cat, testID}): JSX.Element =>{
+const Card: React.FC<Prop> = ({cat, testID, index}): JSX.Element =>{
 
     return (
         <RNCard>
@@ -19,7 +19,8 @@ const Card: React.FC<Prop> = ({cat, testID}): JSX.Element =>{
                         <Text fontFamily='NunitoSans-Bold' color='#BFBFC0' fontSize={8}>{cat.origin}</Text>
                     </Div>
                     <Div alignSelf='flex-end' mr={5}>
-                        <Text fontFamily='NunitoSans-Bold' fontWeight='bold' fontSize={18}>{cat.affection_level}</Text>
+                        {/* <Text fontFamily='NunitoSans-Bold' fontWeight='bold' fontSize={18}>{cat.affection_level}</Text> */}
+                        <Text fontFamily='NunitoSans-Bold' fontWeight='bold' fontSize={18}>{index}</Text>
                     </Div>
                 </Div>
             </Div>
