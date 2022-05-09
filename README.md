@@ -59,8 +59,7 @@ This project uses the follown dependencies
 
 Clone the project and execute: `yarn install`, `cd ios/`, `pod install`, `cd ..`
 
-> [ios]: `yarn ios`
-> [android]: `yarn android`
+> [ios]: `yarn ios` > [android]: `yarn android`
 
 ## How to run the tests
 
@@ -71,10 +70,13 @@ For running the unit test you should run the follow command;
 For running the end-to-end tests you should to do a task first. (Please, use the iOS Project)
 
 > `npm install -g detox-cli`
-> execute the follow command for build an artifact for testing:
+
+execute the follow command for build an artifact for testing:
 
 > `yarn ios:e2e-build`
-> and last, execute this command for running the e-2-e test.
+
+and last, execute this command for running the e-2-e test.
+
 > `yarn ios:e2e`
 
 You'll seen something like the one shown in the follow video:
