@@ -12,7 +12,7 @@ const Card: React.FC<Prop> = ({cat, testID, index}): JSX.Element =>{
 
     return (
         <RNCard>
-            <Div flex={1} rounded={16} shadow="md" testID={testID} bgImg={cat.image} bgMode="cover" w={343} h={446} flexDir="column-reverse">
+            <Div flex={1} rounded={16} shadow="md" testID={testID} bgImg={{uri: cat.image.url}} bgMode="cover" w={343} h={446} flexDir="column-reverse">
                 <Div  flexDir='row' alignSelf='center' bg='white' w={307} h={48} roundedTopLeft={16} roundedTopRight={16} p={10}>
                     <Div flex={1} alignSelf='flex-start' ml={10}>
                         <Text fontFamily='NunitoSans-Bold' fontSize={16}>{cat.name}</Text>
@@ -20,7 +20,6 @@ const Card: React.FC<Prop> = ({cat, testID, index}): JSX.Element =>{
                     </Div>
                     <Div alignSelf='flex-end' mr={5}>
                         <Text fontFamily='NunitoSans-Bold' fontWeight='bold' fontSize={18}>{cat.affection_level}</Text>
-                        {/* <Text fontFamily='NunitoSans-Bold' fontWeight='bold' fontSize={18}>{index}</Text> */}
                     </Div>
                 </Div>
             </Div>
