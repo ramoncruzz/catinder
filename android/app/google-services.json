@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "890025252867",
+    "project_id": "catinder-b5d51",
+    "storage_bucket": "catinder-b5d51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890025252867:android:59a908a8bfefe0fda25636",
+        "android_client_info": {
+          "package_name": "com.catinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890025252867-rq3s1evf7vfe5hfuttk5q1q9edcprnpd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfRWtpXLEm8WAi01rMfk53f_XUfxJNkmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890025252867-rq3s1evf7vfe5hfuttk5q1q9edcprnpd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
