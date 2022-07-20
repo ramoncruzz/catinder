@@ -55,7 +55,7 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     // If you opted-in for the New Architecture, we enable the TurboModule system
     ReactFeatureFlags.useTurboModules = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
-      RawCertificatePinner pinner = new RawCertificatePinner(this, R.raw.boavistabks, "boavista");
+      RawCertificatePinner pinner = new RawCertificatePinner(this, R.raw.thecatapi, "thecat");
       OkHttpClientProvider.setOkHttpClientFactory(pinner);
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
