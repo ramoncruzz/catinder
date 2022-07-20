@@ -55,7 +55,8 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     // If you opted-in for the New Architecture, we enable the TurboModule system
     ReactFeatureFlags.useTurboModules = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
-      RawCertificatePinner pinner = new RawCertificatePinner(this, R.raw.thecatapi, "thecat");
+    // TODO It's need to create a variable on Firebase Remote config for keeping the certificate Password
+      RawCertificatePinner pinner = new RawCertificatePinner(this, R.raw.thecatapi_plus, "thecat");
       OkHttpClientProvider.setOkHttpClientFactory(pinner);
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
