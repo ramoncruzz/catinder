@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* CatinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CatinderTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-Catinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Catinder.a */; };
-		0F9EEC5E28284C4E004A2B0A /* NunitoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9EEC5D28284C4E004A2B0A /* NunitoSans-Bold.ttf */; };
+		0F041EEE28908113007A2E7E /* NunitoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F041EED28908113007A2E7E /* NunitoSans-Bold.ttf */; };
+		0FC769142899BB8B00E0E98E /* SSLPinning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC769132899BB8B00E0E98E /* SSLPinning.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -31,7 +32,10 @@
 		00E356EE1AD99517003FC87E /* CatinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* CatinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatinderTests.m; sourceTree = "<group>"; };
-		0F9EEC5D28284C4E004A2B0A /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NunitoSans-Bold.ttf"; path = "../../../../../Downloads/Nunito_Sans/NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
+		0F041EED28908113007A2E7E /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
+		0F041EEF28908443007A2E7E /* api.thecatapi.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = api.thecatapi.com.cer; sourceTree = "<group>"; };
+		0FC769122899BB8B00E0E98E /* SSLPinning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSLPinning.h; sourceTree = "<group>"; };
+		0FC769132899BB8B00E0E98E /* SSLPinning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSLPinning.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Catinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Catinder/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Catinder/AppDelegate.mm; sourceTree = "<group>"; };
@@ -85,17 +89,36 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0F041EEC289053D1007A2E7E /* certificates */ = {
+			isa = PBXGroup;
+			children = (
+				0F041EEF28908443007A2E7E /* api.thecatapi.com.cer */,
+			);
+			name = certificates;
+			sourceTree = "<group>";
+		};
 		0F9EEC4E28284B35004A2B0A /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				0F9EEC5D28284C4E004A2B0A /* NunitoSans-Bold.ttf */,
+				0F041EED28908113007A2E7E /* NunitoSans-Bold.ttf */,
 			);
 			name = fonts;
+			sourceTree = "<group>";
+		};
+		0FC769112899BB6E00E0E98E /* SSLPinning */ = {
+			isa = PBXGroup;
+			children = (
+				0FC769122899BB8B00E0E98E /* SSLPinning.h */,
+				0FC769132899BB8B00E0E98E /* SSLPinning.m */,
+			);
+			name = SSLPinning;
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* Catinder */ = {
 			isa = PBXGroup;
 			children = (
+				0FC769112899BB6E00E0E98E /* SSLPinning */,
+				0F041EEC289053D1007A2E7E /* certificates */,
 				0F9EEC4E28284B35004A2B0A /* fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -253,9 +276,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F9EEC5E28284C4E004A2B0A /* NunitoSans-Bold.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				0F041EEE28908113007A2E7E /* NunitoSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +447,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				0FC769142899BB8B00E0E98E /* SSLPinning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

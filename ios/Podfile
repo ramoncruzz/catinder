@@ -6,7 +6,7 @@ install! 'cocoapods', :deterministic_uuids => false
 
 target 'Catinder' do
   config = use_native_modules!
-
+  pod 'TrustKit'
   # Flags change depending on the env values.
   flags = get_default_flags()
 
