@@ -11,8 +11,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     text: {
-        fontSize: 25,
-        fontWeight: 'bold',
+        fontSize: 126,
+        fontFamily: 'NunitoSans-Bold',
+        color: '#BFBFC0'
     }
 });
 export default styles;

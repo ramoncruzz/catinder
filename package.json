@@ -5,6 +5,10 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "android:e2e": "detox test --configuration android.e2e.debug --loglevel verbose",
+    "android:e2e-build": "detox build --configuration android.e2e.debug",
+    "ios:e2e": "detox test --configuration ios.e2e.debug --loglevel verbose",
+    "ios:e2e-build": "detox build --configuration ios.e2e.debug",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
@@ -67,6 +71,12 @@
   },
   "jest": {
     "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?(@react-native|react-native)|@react-native-community|@react-navigation|react-native-card-stack-swiper)"
+    ],
+    "testMatch": [
+      "<rootDir>/__tests__/**/?(*.)(test).(js|jsx|ts|tsx)"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",

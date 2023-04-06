@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { listCats } from '../services/TheCat.api';
 import { Cat } from '../utils/types';
 const useBoticario = () => {
